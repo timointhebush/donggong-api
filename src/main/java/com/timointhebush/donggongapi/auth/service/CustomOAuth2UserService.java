@@ -1,7 +1,7 @@
 package com.timointhebush.donggongapi.auth.service;
 
 import com.timointhebush.donggongapi.auth.model.OAuth2Attributes;
-import com.timointhebush.donggongapi.auth.model.SessionUser;
+import com.timointhebush.donggongapi.model.SessionUser;
 import com.timointhebush.donggongapi.model.Account;
 import com.timointhebush.donggongapi.service.AccountService;
 import lombok.RequiredArgsConstructor;
