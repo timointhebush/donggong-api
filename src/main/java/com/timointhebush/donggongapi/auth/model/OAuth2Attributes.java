@@ -28,8 +28,8 @@ public class OAuth2Attributes {
         return new OAuth2Attributes(
                 attributes,
                 attributeKey,
-                (String) attributes.get("email"),
                 (String) attributes.get("name"),
+                (String) attributes.get("email"),
                 (String) attributes.get("picture")
         );
     }
@@ -39,7 +39,7 @@ public class OAuth2Attributes {
                 .name(name)
                 .email(email)
                 .picture(picture)
-                .role(Role.GUEST)
+                .role(Role.USER)
                 .build();
     }
 }
