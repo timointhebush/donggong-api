@@ -1,6 +1,6 @@
-package com.timointhebush.donggongapi.auth.model;
+package com.timointhebush.donggongapi.model;
 
-import com.timointhebush.donggongapi.model.Account;
+import com.timointhebush.donggongapi.model.enums.Role;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -9,13 +9,21 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Getter
 public class SessionUser implements Serializable{
+    private Long id;
     private String email;
     private String name;
     private String picture;
+    private Role role;
+    private String createdAt;
+    private String updatedAt;
 
     public SessionUser(Account account) {
+        this.id = account.getId();
         this.name = account.getName();
         this.email = account.getEmail();
         this.picture = account.getPicture();
+        this.role = account.getRole();
+        this.createdAt = account.getCreatedAt().toString();
+        this.updatedAt = account.getUpdatedAt().toString();
     }
 }
