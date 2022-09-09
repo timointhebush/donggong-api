@@ -1,15 +1,22 @@
 package com.timointhebush.donggongapi.model;
 
 import com.timointhebush.donggongapi.model.enums.Role;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
+import java.time.Instant;
 
 @Entity
 @Getter
 @NoArgsConstructor
-public class Account extends BaseTimeEntity {
+@AllArgsConstructor
+@Builder
+public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,6 +29,12 @@ public class Account extends BaseTimeEntity {
 
     @Enumerated(EnumType.STRING)
     private Role role;
+
+    @CreationTimestamp
+    private Instant createdAt;
+
+    @UpdateTimestamp
+    private Instant updatedAt;
 
     public Account updateNameAndPicture(String name, String picture) {
         this.name = name;
