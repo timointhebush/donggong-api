@@ -29,5 +29,17 @@ spring:
             scope:
               - profile
               - email
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 512MB
+      max-request-size: 512MB
 server:
   port: [port]
+s3:
+  region: [region]
+  bucket: [bucket]
+  access-key: [access-key]
+  secret-key: [secret-key]
+environment:
+  local-storage-home: [local-storage-home]
