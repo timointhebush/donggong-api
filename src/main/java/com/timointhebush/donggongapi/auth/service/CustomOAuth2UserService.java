@@ -1,9 +1,9 @@
 package com.timointhebush.donggongapi.auth.service;
 
 import com.timointhebush.donggongapi.auth.model.OAuth2Attributes;
-import com.timointhebush.donggongapi.model.SessionUser;
-import com.timointhebush.donggongapi.model.Account;
-import com.timointhebush.donggongapi.service.AccountService;
+import com.timointhebush.donggongapi.account.model.SessionUser;
+import com.timointhebush.donggongapi.account.model.Account;
+import com.timointhebush.donggongapi.account.service.AccountService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

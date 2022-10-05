@@ -1,7 +1,7 @@
 package com.timointhebush.donggongapi.auth.config;
 
 import com.timointhebush.donggongapi.auth.service.CustomOAuth2UserService;
-import com.timointhebush.donggongapi.model.enums.Role;
+import com.timointhebush.donggongapi.account.model.Role;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

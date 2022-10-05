@@ -1,6 +1,6 @@
 package com.timointhebush.donggongapi.auth.annotation;
 
-import com.timointhebush.donggongapi.model.SessionUser;
+import com.timointhebush.donggongapi.account.model.SessionUser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Component;

@@ -1,8 +1,8 @@
 package com.timointhebush.donggongapi.auth.model;
 
 import com.timointhebush.donggongapi.auth.exception.UnknownProviderException;
-import com.timointhebush.donggongapi.model.Account;
-import com.timointhebush.donggongapi.model.enums.Role;
+import com.timointhebush.donggongapi.account.model.Account;
+import com.timointhebush.donggongapi.account.model.Role;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
