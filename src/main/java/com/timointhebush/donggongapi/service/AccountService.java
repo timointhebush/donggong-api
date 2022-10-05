@@ -1,12 +1,16 @@
 package com.timointhebush.donggongapi.service;
 
+import com.timointhebush.donggongapi.exception.AccountNotFoundException;
 import com.timointhebush.donggongapi.model.Account;
+import com.timointhebush.donggongapi.model.SessionUser;
 import com.timointhebush.donggongapi.repository.AccountRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class AccountService {
@@ -18,5 +22,11 @@ public class AccountService {
 
     public Optional<Account> findByEmail(String email) {
         return accountRepository.findByEmail(email);
+    }
+
+    public Account findBySessionUser(SessionUser user) {
+        log.info("ACCT:READ:USER:: 세션 유저 정보로 계정 조회 - {}", user);
+        return accountRepository.findById(user.getId())
+                .orElseThrow(() -> new AccountNotFoundException("계정을 찾을 수 없습니다. : " + user));
     }
 }
