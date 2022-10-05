@@ -3,11 +3,13 @@ package com.timointhebush.donggongapi.model;
 import com.timointhebush.donggongapi.model.enums.Role;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.ToString;
 
 import java.io.Serializable;
 
 @AllArgsConstructor
 @Getter
+@ToString
 public class SessionUser implements Serializable{
     private Long id;
     private String email;
